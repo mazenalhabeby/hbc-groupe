@@ -1,0 +1,65 @@
+{
+  "aboutus": "About us",
+  "aboutusDescription": "As your trusted partner for sustainable and ecological solutions, we are passionate about environmental protection and social\n            responsibility by acting honestly and transparently. Discover our\n            eco-friendly products and services designed to have a positive\n            impact on the world. Together, we are creating a better future for\n            all of us.",
+  "aboutusTitle": "Responsibility for Sustainable Solutions.",
+  "aboutussubTitle": "Success together",
+  "agrosubstrates": "Sustainable",
+  "agrosubstratesDescription": "Agrosubstrates allow precise control of irrigation and nutrient supply and less water is wasted.",
+  "contactUsSectionButton": "CONTACT US",
+  "contactUsSectionTitle": "Contact to Expertise in the<br></br>\n          manufacturing industry",
+  "description": "Where visionary design meets industrial strength — delivering eco-smart, high-precision solutions that shape tomorrow’s world.",
+  "globalMovement": "Strong together",
+  "globalMovementDescription": "Be part of a global movement for sustainability and community – every contribution counts!",
+  "innoSoft": "Innovative",
+  "innoSoftDescription": "Through constant research and development, we are pioneers in the development of sustainable technologies and solutions.",
+  "product": {
+    "bgText": "Products",
+    "ecological_perlite": "Ecological perlite bulk insulation",
+    "ecological_perlite_subtitle": "Construction, Insulation, Soundproofing",
+    "fabric_plaster": "Stauss FG façade fabric plaster",
+    "fills_screed": "Compaction Shoes Fills Screed",
+    "fills_screed_subtitle": "Accessories, Construction",
+    "plaster_subtitle": "Construction, Soundproofing, Staufs",
+    "subtitle": "Popular products",
+    "title": "We have the best quality industrial products.",
+    "ultimate_raised_bed": "The Ultimate Raised Bed",
+    "ultimate_raised_bed_subtitle": "Agro, Plant storage"
+  },
+  "projectsCompleted": "Projects Completed",
+  "satisfiedClients": "Satisfied Clients",
+  "services": {
+    "buildingMaterials": {
+      "description": "Ecological building materials for facades, roofs, floors, and walls, promoting sustainable construction practices.",
+      "subtitle": "Materials for Sustainable Structures",
+      "title": "Building Materials"
+    },
+    "fireProtection": {
+      "description": "Comprehensive fire protection services, including wood preservation, film protection, and facade safety measures.",
+      "subtitle": "Safety at its Core",
+      "title": "Fire Protection"
+    },
+    "greenConstruction": {
+      "description": "Nawaro solutions for green roofs, water reservoirs, and breeding plantations, enhancing environmental sustainability.",
+      "subtitle": "Nature-Inspired Design",
+      "title": "Green Construction"
+    },
+    "maintenance": {
+      "description": "Regular maintenance services ensuring longevity and optimal performance of structures and systems.",
+      "subtitle": "Keep Systems Running",
+      "title": "Maintenance"
+    },
+    "smartHome": {
+      "description": "Innovative smart home technologies for enhanced comfort, security, and energy efficiency.",
+      "subtitle": "Intelligent Living",
+      "title": "Smart Home"
+    }
+  },
+  "servicesSection": {
+    "bgText": "Services",
+    "subtitle": "Discover our sustainable and smart solutions.",
+    "title": "Our Services"
+  },
+  "sustainableValue": "Ecological",
+  "sustainableValueDescription": "Shaping the future with ecological and sustainable added value. Plan your future with us.",
+  "title": "Engineering the Future<br></br>with Sustainable Excellence"
+}

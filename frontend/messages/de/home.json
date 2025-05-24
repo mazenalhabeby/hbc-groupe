@@ -1,0 +1,65 @@
+{
+  "aboutus": "Über uns",
+  "aboutusDescription": "Als Ihr vertrauenswürdiger Partner für nachhaltige und ökologische Lösungen sind wir leidenschaftlich für Umweltschutz und soziale\n            \nVerantwortung durch ehrlich und transparent handeln. \nEntdecken Sie unsere\n            \numweltfreundliche Produkte und Dienstleistungen für eine positive\n            \nAuswirkungen auf die Welt. \nZusammen schaffen wir eine bessere Zukunft für\n            \nWir alle.",
+  "aboutusTitle": "Verantwortung für nachhaltige Lösungen.",
+  "aboutussubTitle": "Erfolg zusammen",
+  "agrosubstrates": "Nachhaltig",
+  "agrosubstratesDescription": "Agrosubstrate ermöglichen eine präzise Kontrolle der Bewässerung und Nährstoffversorgung und weniger Wasser wird verschwendet.",
+  "contactUsSectionButton": "Kontaktieren Sie uns",
+  "contactUsSectionTitle": "Kontakt zu Fachwissen in der <br></br>\n          \nFertigungsindustrie",
+  "description": "Wo visionäres Design die industrielle Stärke entspricht-liefert Eco-Smart-Lösungen mit hoher Präzision, die die Welt von morgen prägen.",
+  "globalMovement": "Stark zusammen",
+  "globalMovementDescription": "Seien Sie Teil einer globalen Bewegung für Nachhaltigkeit und Gemeinschaft - jeder Beitrag zählt!",
+  "innoSoft": "Innovativ",
+  "innoSoftDescription": "Durch ständige Forschung und Entwicklung sind wir Pioniere bei der Entwicklung nachhaltiger Technologien und Lösungen.",
+  "product": {
+    "bgText": "Produkte",
+    "ecological_perlite": "Ökologische Perlite -Massenisolierung",
+    "ecological_perlite_subtitle": "Konstruktion, Isolierung, Schallschutz",
+    "fabric_plaster": "Stauss FG Fassade Stoff Gips",
+    "fills_screed": "Verdichtungsschuhe füllen Estrich",
+    "fills_screed_subtitle": "Zubehör, Konstruktion",
+    "plaster_subtitle": "Konstruktion, Schallschutz, Staufs",
+    "subtitle": "Beliebte Produkte",
+    "title": "Wir haben die besten industriellen Produkte.",
+    "ultimate_raised_bed": "Das ultimative Hochbeet",
+    "ultimate_raised_bed_subtitle": "Agro, Pflanzenlager"
+  },
+  "projectsCompleted": "Projekte abgeschlossen",
+  "satisfiedClients": "Zufriedene Kunden",
+  "services": {
+    "buildingMaterials": {
+      "description": "Ökologische Baumaterialien für Fassaden, Dächer, Böden und Wände, die nachhaltige Baupraktiken fördern.",
+      "subtitle": "Materialien für nachhaltige Strukturen",
+      "title": "Baustoffe"
+    },
+    "fireProtection": {
+      "description": "Umfassende Brandschutzdienste, einschließlich Holzerhaltung, Filmschutz und Sicherheitsmaßnahmen der Fassade.",
+      "subtitle": "Sicherheit im Kern",
+      "title": "Brandschutz"
+    },
+    "greenConstruction": {
+      "description": "Nawaro -Lösungen für grüne Dächer, Wasserreservoire und Zuchtplantagen, die die Umweltverträglichkeit verbessert.",
+      "subtitle": "Nature-inspiriertes Design",
+      "title": "Grüne Konstruktion"
+    },
+    "maintenance": {
+      "description": "Regelmäßige Wartungsdienste, um die Langlebigkeit und die optimale Leistung von Strukturen und Systemen sicherzustellen.",
+      "subtitle": "Halten Sie Systeme am Laufen",
+      "title": "Wartung"
+    },
+    "smartHome": {
+      "description": "Innovative Smart -Home -Technologien für verbesserte Komfort, Sicherheit und Energieeffizienz.",
+      "subtitle": "Intelligentes Leben",
+      "title": "Smart Home"
+    }
+  },
+  "servicesSection": {
+    "bgText": "Dienstleistungen",
+    "subtitle": "Entdecken Sie unsere nachhaltigen und intelligenten Lösungen.",
+    "title": "Unsere Dienste"
+  },
+  "sustainableValue": "Ökologisch",
+  "sustainableValueDescription": "Gestaltung der Zukunft mit ökologischem und nachhaltigem Mehrwert. \nPlanen Sie Ihre Zukunft mit uns.",
+  "title": "Die Zukunft gestalten<br></br>mit nachhaltiger Exzellenz"
+}
