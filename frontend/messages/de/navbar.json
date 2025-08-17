@@ -1,8 +1,18 @@
 {
-  "Technology": "Technologie",
+  "technology": "Technologie",
   "contact": "Kontakt",
-  "fProtection": "Brandschutz",
   "maintenance": "Wartung",
+  "smartHome": "Smart Haus",
+  "careers": "Karrieren",
+  "Contact": "Kontakt",
   "shop": "Geschäft",
-  "smartHome": "Smart Home"
+  "subtitle": {
+    "shop": {
+      "product": {
+        "title": "Produkte"
+      }
+    }
+  },
+  "home": "Startseite",
+  "fireProtection": "Brandschutz"
 }

@@ -2,8 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-
-import {cn} from "@/lib/utils"
+import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,146 +12,84 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import {useTranslations} from "next-intl"
-
-const components: {title: string; href: string; description: string}[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-]
+import { useTranslations } from "next-intl"
+import { NAV_ITEMS } from "@/data"
 
 export function NavigationMenuMain() {
   const t = useTranslations()
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <Link
-            href="/docs"
-            className={`${navigationMenuTriggerStyle()} bg-transparent`}
-          >
-            {t("navbar.smartHome")}
-          </Link>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <Link
-            href="/docs"
-            className={`${navigationMenuTriggerStyle()} bg-transparent`}
-          >
-            {t("navbar.maintenance")}
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link
-            href="/docs"
-            className={`${navigationMenuTriggerStyle()} bg-transparent`}
-          >
-            {t("navbar.Technology")}
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className=" bg-transparent">
-            {t("navbar.fProtection")}
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <Link
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
-                    </p>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className=" bg-transparent">
-            {t("navbar.shop")}
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
+        {NAV_ITEMS.map((item, i) => {
+          if (item.kind === "link") {
+            return (
+              <NavigationMenuItem key={i}>
+                <Link
+                  href={item.href}
+                  className={cn(navigationMenuTriggerStyle(), "bg-transparent")}
                 >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link
-            href="/docs"
-            className={`${navigationMenuTriggerStyle()} bg-transparent`}
-          >
-            {t("navbar.contact")}
-          </Link>
-        </NavigationMenuItem>
+                  {t(item.titleKey)}
+                </Link>
+              </NavigationMenuItem>
+            )
+          }
+          
+          const showContent =
+            (item.subLinks && item.subLinks.length > 0) || item.promoPanel
+
+          return (
+            <NavigationMenuItem key={i}>
+              <NavigationMenuTrigger className="bg-transparent">
+                {t(item.titleKey)}
+              </NavigationMenuTrigger>
+
+              {showContent && (
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {/* Promo panel (optional, shown only if provided) */}
+                    {item.promoPanel && item.promoPanel.type === "basic" && (
+                      <li className="row-span-3">
+                        <NavigationMenuLink asChild>
+                          <Link
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                            href={item.promoPanel.href}
+                          >
+                            <div className="mb-2 mt-4 text-lg font-medium">
+                              {t(item.promoPanel.titleKey)}
+                            </div>
+                            {item.promoPanel.descriptionKey && (
+                              <p className="text-sm leading-tight text-muted-foreground">
+                                {t(item.promoPanel.descriptionKey)}
+                              </p>
+                            )}
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    )}
+
+                    {/* Sublinks (optional) */}
+                    {item.subLinks?.map((sub) => (
+                      <ListItem key={sub.href} href={sub.href} title={t(sub.titleKey)}>
+                        {sub.descriptionKey ? t(sub.descriptionKey) : undefined}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              )}
+            </NavigationMenuItem>
+          )
+        })}
       </NavigationMenuList>
     </NavigationMenu>
   )
 }
 
+// ---------- Shared list item ----------
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({className, title, children, ...props}, ref) => {
+  React.ComponentPropsWithoutRef<"a"> & { title: string }
+>(({ className, title, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -165,9 +102,11 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
+          {children ? (
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+              {children}
+            </p>
+          ) : null}
         </a>
       </NavigationMenuLink>
     </li>

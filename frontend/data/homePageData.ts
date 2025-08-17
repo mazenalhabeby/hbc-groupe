@@ -1,12 +1,39 @@
-import SectionHeading from "@/components/SectionHeading"
-import ServiceBox from "@/components/ServiceBox"
-import {useTranslations} from "next-intl"
-import Image from "next/image"
-import React from "react"
 import {FaHome, FaLeaf, FaWrench} from "react-icons/fa"
 import {FaCubes, FaFire} from "react-icons/fa6"
 
-const services = [
+export const ProductItemSectionData = [
+  {
+    imageUrl: "/images/product01.jpg",
+    title: "home.product.ecological_perlite",
+    subtitle: "home.product.ecological_perlite_subtitle",
+    price: 31,
+    rating: 4,
+  },
+  {
+    imageUrl: "/images/product02.jpg",
+    title: "home.product.ultimate_raised_bed",
+    subtitle: "home.product.ultimate_raised_bed_subtitle",
+    price: 12,
+    rating: 4.5,
+  },
+  {
+    imageUrl: "/images/product03.jpg",
+    title: "home.product.fabric_plaster",
+    subtitle: "home.product.plaster_subtitle",
+    price: 87,
+    rating: 4,
+  },
+  {
+    imageUrl: "/images/product04.jpg",
+    title: "home.product.fills_screed",
+    subtitle: "home.product.fills_screed_subtitle",
+    price: 36,
+    rating: 5,
+  },
+]
+export type ProductItemType = typeof ProductItemSectionData[number]
+
+export const ServicesSectionData = [
   {
     icon: FaCubes,
     title: "home.services.buildingMaterials.title",
@@ -49,41 +76,4 @@ const services = [
   },
 ]
 
-export const ServicesSection = () => {
-  const t = useTranslations()
-
-  return (
-    <section className="py-16 bg-gray-50 relative overflow-hidden px-2 xl:px-0">
-      <Image
-        src="/images/bg.jpg"
-        alt="Background Image"
-        width={1920}
-        height={100}
-        className="absolute inset-0 w-full h-1/2 object-cover opacity-50"
-      />
-      <div className="max-w-2xl mx-auto text-center mb-10">
-        <SectionHeading
-          subtitle={t("home.servicesSection.title")}
-          title={t("home.servicesSection.subtitle")}
-          backgroundText={t("home.servicesSection.bgText")}
-          backgourndTextsize="text-6xl"
-          align="center"
-        />
-      </div>
-
-      <div className="flex flex-row flex-wrap justify-center gap-8">
-        {services.map((service, index) => (
-          <ServiceBox
-            key={index}
-            title={t(service.title)}
-            subtitle={t(service.subtitle)}
-            description={t(service.description)}
-            icon={<service.icon />}
-            iconBoxColor={service.color}
-            imageUrl={service.img}
-          />
-        ))}
-      </div>
-    </section>
-  )
-}
+export type ServiceItemType = typeof ServicesSectionData[number]
