@@ -1,5 +1,5 @@
 import {FaHome, FaLeaf, FaWrench} from "react-icons/fa"
-import {FaCubes, FaFire} from "react-icons/fa6"
+import {FaFire} from "react-icons/fa6"
 
 export const ProductItemSectionData = [
   {
@@ -34,14 +34,6 @@ export const ProductItemSectionData = [
 export type ProductItemType = typeof ProductItemSectionData[number]
 
 export const ServicesSectionData = [
-  {
-    icon: FaCubes,
-    title: "home.services.buildingMaterials.title",
-    subtitle: "home.services.buildingMaterials.subtitle",
-    description: "home.services.buildingMaterials.description",
-    color: "bg-red-500",
-    img: "/images/serviceImg01.jpg",
-  },
   {
     icon: FaLeaf,
     title: "home.services.greenConstruction.title",

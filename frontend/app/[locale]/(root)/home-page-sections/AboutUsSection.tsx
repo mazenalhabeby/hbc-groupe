@@ -1,32 +1,32 @@
-"use client"
+"use client";
 
-import SectionHeading from "@/components/SectionHeading"
-import StatItemCounter from "@/components/StatsCounter"
-import Image from "next/image"
+import SectionHeading from "@/components/SectionHeading";
+import Image from "next/image";
 import {
   FaGear,
   FaArrowUpRightDots,
   FaHandshakeSimple,
   FaLayerGroup,
-} from "react-icons/fa6"
-import {motion} from "framer-motion"
-import {useInView} from "react-intersection-observer"
-import FeatureCard from "@/components/FeatureCard"
-import {Separator} from "@/components/ui/separator"
-import {FaInnosoft} from "react-icons/fa"
-import {useTranslations} from "next-intl"
+} from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Separator } from "@/components/ui/separator";
+import { FaInnosoft } from "react-icons/fa";
+import { useTranslations } from "next-intl";
+import FeatureCard from "@/components/FeatureCard";
+import StatItemCounter from "@/components/StatsCounter";
 
 export function AboutUs() {
-  const t = useTranslations()
-  const {ref, inView} = useInView({triggerOnce: true, threshold: 0.2})
+  const t = useTranslations();
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
     <section ref={ref} className="bg-white py-16 overflow-hidden">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-10">
         <motion.div
-          initial={{x: -100, opacity: 0}}
-          animate={inView ? {x: 0, opacity: 1} : {}}
-          transition={{duration: 0.8, ease: "easeOut"}}
+          initial={{ x: -100, opacity: 0 }}
+          animate={inView ? { x: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full lg:w-1/2"
         >
           <SectionHeading
@@ -67,9 +67,9 @@ export function AboutUs() {
         </motion.div>
 
         <motion.div
-          initial={{x: 100, opacity: 0}}
-          animate={inView ? {x: 0, opacity: 1} : {}}
-          transition={{duration: 0.8, ease: "easeOut", delay: 0.2}}
+          initial={{ x: 100, opacity: 0 }}
+          animate={inView ? { x: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="w-full lg:w-1/2"
         >
           <div className="relative flex flex-row gap-8 mb-8 z-30 justify-center">
@@ -83,7 +83,7 @@ export function AboutUs() {
               alt="About Us Image"
               width={600}
               height={600}
-              className="rounded-3xl h-auto w-auto"
+              priority
             />
             <div className="absolute -top-48 -md:top-28 -right-48 -md:right-28 w-[24rem] h-[24rem] animate-[spin_8s_linear_infinite]">
               <div className="absolute inset-0 z-10 flex items-center justify-center">
@@ -113,5 +113,5 @@ export function AboutUs() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

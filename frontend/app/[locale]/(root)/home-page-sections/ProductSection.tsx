@@ -1,11 +1,11 @@
-import ProductCard from "@/components/ProductCard"
-import SectionHeading from "@/components/SectionHeading"
-import { ProductItemSectionData } from "@/data"
-import {useTranslations} from "next-intl"
-import React from "react"
+import ProductCard from "@/components/ProductCard";
+import SectionHeading from "@/components/SectionHeading";
+import { ProductItemSectionData } from "@/data";
+import { useTranslations } from "next-intl";
+import React from "react";
 
 export function ProductSection() {
-  const t = useTranslations()
+  const t = useTranslations();
 
   return (
     <section className="py-16 bg-gray-200 relative overflow-hidden">
@@ -31,5 +31,5 @@ export function ProductSection() {
         ))}
       </div>
     </section>
-  )
+  );
 }

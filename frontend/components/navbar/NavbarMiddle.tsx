@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import {useTranslations} from "next-intl"
-import LanguageSwitcher from "../LanguageSwitcher"
-import {contactDetails} from "./data"
-import {Logo} from "./logo"
-import {NavigationMenuMain} from "./NavigationMenu"
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "../LanguageSwitcher";
+import { contactDetails } from "./data";
+import { Logo } from "./logo";
+import { NavigationMenuMain } from "./NavigationMenu";
 
 export function NavbarMiddle() {
-  const t = useTranslations()
+  const t = useTranslations();
   return (
     <div className=" bg-white">
       <div className="flex flex-row justify-between items-center gap-4 ">
@@ -34,7 +34,7 @@ export function NavbarMiddle() {
           <div className="h-4"></div>
           <div className=" absolute w-full top-14 text-white font-bold px-6 py-2 flex justify-between items-center rounded-l-full z-50">
             <div className=" absolute bg-gradient-to-bl from-blue-500 to-blue-800 inset-0 clip-left-nav" />
-            <div className="flex justify-around gap-6 px-12 py-1 text-lg w-full z-50">
+            <div className="flex flex-1 justify-end gap-12 px-12 py-1 text-lg w-full z-50">
               <NavigationMenuMain />
               <LanguageSwitcher />
             </div>
@@ -42,5 +42,5 @@ export function NavbarMiddle() {
         </div>
       </div>
     </div>
-  )
+  );
 }

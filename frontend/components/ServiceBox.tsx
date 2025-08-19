@@ -1,15 +1,15 @@
-"use client"
-import {ReactNode, useState} from "react"
-import {motion} from "framer-motion"
-import Image from "next/image"
+"use client";
+import { ReactNode, useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface ServiceBoxProps {
-  title: string
-  subtitle: string
-  description: string
-  icon: ReactNode
-  imageUrl: string
-  iconBoxColor?: string
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: ReactNode;
+  imageUrl: string;
+  iconBoxColor?: string;
 }
 
 export default function ServiceBox({
@@ -20,7 +20,7 @@ export default function ServiceBox({
   imageUrl,
   iconBoxColor = "bg-red-500",
 }: ServiceBoxProps) {
-  const [hovered, setHovered] = useState(false)
+  const [hovered, setHovered] = useState(false);
 
   return (
     <div
@@ -57,9 +57,9 @@ export default function ServiceBox({
       {/* Hover Content */}
       {hovered && (
         <motion.div
-          initial={{opacity: 0, y: 50}}
-          animate={{opacity: 1, y: 0}}
-          exit={{opacity: 0, y: 50}}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50 }}
           className="absolute inset-0 bg-white/90 p-6 mr-8"
         >
           <div
@@ -71,11 +71,6 @@ export default function ServiceBox({
           <div className="flex flex-col items-center justify-center h-full text-center">
             <h3 className="text-xl font-bold mb-2 text-black">{title}</h3>
             <p className="text-gray-700 mb-4">{description}</p>
-            <button
-              className={`${iconBoxColor} text-white py-2 px-4 rounded-full hover:bg-opacity-80 transition duration-300`}
-            >
-              Read More →
-            </button>
           </div>
           <div
             className={`top-6 -right-10 ${iconBoxColor} w-12 h-12 rotate-[70deg] absolute z-10`}
@@ -83,5 +78,5 @@ export default function ServiceBox({
         </motion.div>
       )}
     </div>
-  )
+  );
 }
