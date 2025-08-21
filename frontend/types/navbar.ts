@@ -15,7 +15,7 @@ type PromoPanel =
       type: "basic"
       titleKey: string
       descriptionKey?: string
-      href: string
+      imageUrl: string
     }
   ;
 

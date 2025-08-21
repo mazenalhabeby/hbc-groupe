@@ -14,5 +14,34 @@
     }
   },
   "home": "Startseite",
-  "fireProtection": "Brandschutz"
+  "fireProtection": "Brandschutz",
+  "services": "Dienstleistungen",
+  "servicesPromo": {
+    "title": "Intelligente Lösungen für die Industrie",
+    "description": "Von der prädiktiven Wartung, die die Fabriken mit Spitzenleistung bis hin zur Automatisierung von Smart Home -Automatisierung verleiht, die Komfort, Sicherheit und Effizienz mit sich bringt, liefern wir intelligente Lösungen für jede Umgebung."
+  },
+  "subLinks": {
+    "maintenance": {
+      "title": "Vorhersagewartung",
+      "description": "Stellen Sie eine optimale Effizienz und minimale Ausfallzeit durch intelligente prädiktive Wartung sicher, die auf industrielle Umgebungen zugeschnitten sind."
+    },
+    "smartHome": {
+      "title": "Intelligente Produktion",
+      "description": "Profitieren Sie von intelligenten Automatisierung und intelligenten Systemen, die für den nahtlosen, zuverlässigen Betrieb und die überlegene Steuerung ausgelegt sind."
+    },
+    "fireProtection": {
+      "title": "Brandschutz",
+      "description": "Fortgeschrittene Lösungen zur Verhinderung, Kontrolle und Minimierung von Brandrisiken in industriellen und kommerziellen Umgebungen."
+    },
+    "securitySystems": {
+      "title": "Nachhaltige Materialien",
+      "description": "Umweltfreundliche Materialien, die entwickelt wurden, um die Umwelteinflüsse zu verringern und gleichzeitig die Haltbarkeit und Leistung zu gewährleisten."
+    }
+  },
+  "products": "Produkte",
+  "productsPromo": {
+    "title": "Industriell",
+    "description": "Von Brandschutzsystemen, die Ihre Einrichtungen schützen, bis hin zu nachhaltigen Baumaterialien, die die Zukunft formen, bieten unsere Produkte Zuverlässigkeit, Sicherheit und langfristigen Wert."
+  },
+  "aboutCompany": "Über Gesellschaft"
 }

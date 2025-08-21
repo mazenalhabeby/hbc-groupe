@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,12 +11,12 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { useTranslations } from "next-intl"
-import { NAV_ITEMS } from "@/data"
+} from "@/components/ui/navigation-menu";
+import { useTranslations } from "next-intl";
+import { NAV_ITEMS } from "@/data";
 
 export function NavigationMenuMain() {
-  const t = useTranslations()
+  const t = useTranslations();
 
   return (
     <NavigationMenu>
@@ -32,11 +32,11 @@ export function NavigationMenuMain() {
                   {t(item.titleKey)}
                 </Link>
               </NavigationMenuItem>
-            )
+            );
           }
-          
+
           const showContent =
-            (item.subLinks && item.subLinks.length > 0) || item.promoPanel
+            (item.subLinks && item.subLinks.length > 0) || item.promoPanel;
 
           return (
             <NavigationMenuItem key={i}>
@@ -51,26 +51,44 @@ export function NavigationMenuMain() {
                     {item.promoPanel && item.promoPanel.type === "basic" && (
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
-                          <Link
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                            href={item.promoPanel.href}
+                          <div
+                            className="relative flex h-full w-full select-none overflow-hidden rounded-md no-underline outline-none focus:shadow-md"
+                            style={{
+                              backgroundImage: `url(${item.promoPanel.imageUrl})`,
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                            }}
                           >
-                            <div className="mb-2 mt-4 text-lg font-medium">
-                              {t(item.promoPanel.titleKey)}
+                            {/* Scrim overlay for contrast */}
+                            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
+
+                            {/* Content */}
+                            <div className="relative z-10 mt-auto p-6">
+                              {/* Glass card for text */}
+                              <div className="max-w-[28rem] rounded-lg bg-black/35 px-4 py-3 ring-1 ring-white/10 backdrop-blur-sm">
+                                <div className="mb-1 text-lg font-semibold leading-tight text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
+                                  {t(item.promoPanel.titleKey)}
+                                </div>
+
+                                {item.promoPanel.descriptionKey && (
+                                  <p className="text-sm leading-snug text-white/70 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)] line-clamp-3">
+                                    {t(item.promoPanel.descriptionKey)}
+                                  </p>
+                                )}
+                              </div>
                             </div>
-                            {item.promoPanel.descriptionKey && (
-                              <p className="text-sm leading-tight text-muted-foreground">
-                                {t(item.promoPanel.descriptionKey)}
-                              </p>
-                            )}
-                          </Link>
+                          </div>
                         </NavigationMenuLink>
                       </li>
                     )}
 
                     {/* Sublinks (optional) */}
                     {item.subLinks?.map((sub) => (
-                      <ListItem key={sub.href} href={sub.href} title={t(sub.titleKey)}>
+                      <ListItem
+                        key={sub.href}
+                        href={sub.href}
+                        title={t(sub.titleKey)}
+                      >
                         {sub.descriptionKey ? t(sub.descriptionKey) : undefined}
                       </ListItem>
                     ))}
@@ -78,11 +96,11 @@ export function NavigationMenuMain() {
                 </NavigationMenuContent>
               )}
             </NavigationMenuItem>
-          )
+          );
         })}
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 // ---------- Shared list item ----------
@@ -110,6 +128,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";

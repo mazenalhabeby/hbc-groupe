@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
-import {Logo} from "@/components/navbar/logo"
-import {Button} from "@/components/ui/button"
-import {useTranslations} from "next-intl"
+import { Logo } from "@/components/navbar/logo";
+
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export function ContactSection() {
-  const t = useTranslations()
+  const t = useTranslations();
   return (
     <section
       className="relative h-[80vh] bg-fixed bg-center flex items-center justify-center text-white"
-      style={{backgroundImage: "url('/images/bg02.jpg')"}}
+      style={{ backgroundImage: "url('/images/bg02.jpg')" }}
     >
       {/* Overlay for red gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-red-500/40 to-transparent w-[60%] z-20" />
@@ -26,13 +27,13 @@ export function ContactSection() {
             br: () => <br className="hidden md:block" />,
           })}
         </h2>
-        <Button
-          size={"lg"}
-          className="bg-red-500 hover:bg-red-600 text-white text-lg font-semibold rounded-md"
+        <Link
+          href="/contact"
+          className="bg-red-500 hover:bg-red-600 text-white text-lg font-semibold rounded-md px-6 py-3 transition-colors duration-300 shadow-lg hover:shadow-xl "
         >
           {t("home.contactUsSectionButton")}
-        </Button>
+        </Link>
       </div>
     </section>
-  )
+  );
 }

@@ -13,5 +13,34 @@
     }
   },
   "home": "Home",
-  "fireProtection": "Fire Protection"
+  "fireProtection": "Fire Protection",
+  "services": "services",
+  "servicesPromo": {
+    "title": "Smart Solutions for Industry & Home",
+    "description": "From predictive maintenance that keeps factories running at peak performance to smart home automation that brings comfort, security, and efficiency — we deliver intelligent solutions for every environment."
+  },
+  "subLinks": {
+    "maintenance": {
+      "title": "Predictive Maintenance",
+      "description": "Ensure optimal efficiency and minimal downtime through intelligent predictive maintenance tailored for industrial environments."
+    },
+    "smartHome": {
+      "title": "Smart Production",
+      "description": "Benefit from intelligent automation and smart systems designed for seamless, reliable operation and superior control."
+    },
+    "fireProtection": {
+      "title": "Fire Protection",
+      "description": "Advanced solutions designed to prevent, control, and minimize fire risks in industrial and commercial environments."
+    },
+    "securitySystems": {
+      "title": "Sustainable Materials",
+      "description": "Eco-friendly materials engineered to reduce environmental impact while ensuring durability and performance."
+    }
+  },
+  "products": "Products",
+  "productsPromo": {
+    "title": "Industrial & Sustainable Products",
+    "description": "From fire protection systems that safeguard your facilities to sustainable building materials that shape the future — our products deliver reliability, safety, and long-term value."
+  },
+  "aboutCompany": "About Company"
 }
