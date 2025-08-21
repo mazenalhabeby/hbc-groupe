@@ -8,6 +8,7 @@ import ChecklistGrid from "@/components/ui/ChecklistGrid";
 import ProcessSteps from "@/components/ui/ProcessSteps";
 import TagPills from "@/components/ui/TagPills";
 import CTA from "@/components/ui/CTA";
+import Image from "next/image";
 
 export default function AboutCompany() {
   return (
@@ -262,7 +263,7 @@ export default function AboutCompany() {
               className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
             >
               <div className="aspect-[4/3] overflow-hidden rounded-xl border border-slate-100">
-                <img
+                <Image
                   src={m.img}
                   alt={m.name}
                   className="h-full w-full object-cover"
